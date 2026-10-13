@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 32px; }
+        h1 { font-size: 24px; }
+        form { max-width: 420px; }
+        .field { margin-bottom: 14px; }
+        label { display: block; margin-bottom: 5px; }
+        input, select, textarea { box-sizing: border-box; width: 100%; padding: 8px; }
+        .inline input { width: auto; }
+        .actions { display: flex; gap: 10px; }
+        .actions input { width: auto; }
+    </style>
+</head>
+<body>
+    <h1>Student Registration</h1>
+    <form action="#" method="post">
+        <div class="field">
+            <label for="full-name">Full Name</label>
+            <input id="full-name" name="fullName" type="text" required>
+        </div>
+        <div class="field">
+            <label for="email-address">Email Address</label>
+            <input id="email-address" name="email" type="email" required>
+        </div>
+        <div class="field">
+            <label for="phone-number">Phone Number</label>
+            <input id="phone-number" name="phone" type="tel" required>
+        </div>
+        <div class="field">
+            <label>Gender</label>
+            <div class="inline">
+                <input id="gender-male" name="gender" type="radio" value="Male">
+                <label for="gender-male" style="display:inline">Male</label>
+                <input id="gender-female" name="gender" type="radio" value="Female">
+                <label for="gender-female" style="display:inline">Female</label>
+                <input id="gender-other" name="gender" type="radio" value="Other">
+                <label for="gender-other" style="display:inline">Other</label>
+            </div>
+        </div>
+        <div class="field">
+            <label for="birth-date">Date of Birth</label>
+            <input id="birth-date" name="dateOfBirth" type="date">
+        </div>
+        <div class="field">
+            <label for="new-password">Create Password</label>
+            <input id="new-password" name="password" type="password" required>
+        </div>
+        <div class="field">
+            <label for="repeat-password">Confirm Password</label>
+            <input id="repeat-password" name="confirmPassword" type="password" required>
+        </div>
+        <div class="field">
+            <label for="postal-address">Address</label>
+            <textarea id="postal-address" name="address" rows="3"></textarea>
+        </div>
+        <div class="field">
+            <label for="academic-department">Department</label>
+            <select id="academic-department" name="department" required>
+                <option value="">Choose a department</option>
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+                <option value="BBA">BBA</option>
+                <option value="English">English</option>
+            </select>
+        </div>
+        <div class="field inline">
+            <input id="accept-terms" name="terms" type="checkbox" required>
+            <label for="accept-terms" style="display:inline">I accept the terms and conditions</label>
+        </div>
+        <div class="actions">
+            <input type="submit" value="Submit Registration">
+            <input type="reset" value="Clear Form">
+        </div>
+    </form>
+</body>
+</html>
